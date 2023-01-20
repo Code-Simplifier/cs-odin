@@ -1,7 +1,7 @@
-const { Configuration, OpenAIApi } = require("openai")
-const express = require("express")
-const bodyParser = require("body-parser")
-const cors = require("cors") 
+import { Configuration, OpenAIApi } from "openai"
+import express from "express"
+import bodyParser from "body-parser"
+import cors from 'cors'
 
 
 const app = express()
