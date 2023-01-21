@@ -4,13 +4,13 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, signO
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyByZSh2TWsbeV7h0EGOBePWmPJzcFltYsw",
-  authDomain: "cs-odin.firebaseapp.com",
-  projectId: "cs-odin",
-  storageBucket: "cs-odin.appspot.com",
-  messagingSenderId: "1093561676474",
-  appId: "1:1093561676474:web:7627abe1ac77ae216a4883",
-  measurementId: "G-09QETL3C7W"
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MSG_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 };
 
 

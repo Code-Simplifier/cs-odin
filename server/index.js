@@ -2,6 +2,9 @@ import { Configuration, OpenAIApi } from "openai"
 import express from "express"
 import bodyParser from "body-parser"
 import cors from 'cors'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 
 const app = express()
@@ -12,7 +15,7 @@ app.use(cors())
 
 const configuration = new Configuration({
     organization: "org-CAKTm7AtAqQ9dRtYkJDx98L3",
-    apiKey: "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"
+    apiKey: process.env.OPENAI_KEY
 })
 
 const openai = new OpenAIApi(configuration)
@@ -35,7 +38,7 @@ app.post("/", async (req, res) => {
     const response = await openai.createCompletion({
         model: `${model}`,
         prompt: `${message}`,
-        max_tokens: 100,
+        max_tokens: 3000,
         temperature: temp,
     })
 
