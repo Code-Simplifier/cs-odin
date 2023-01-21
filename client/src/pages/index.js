@@ -221,7 +221,7 @@ export default function Home() {
 
     const messages = chatLogNew.map((message) => message.message).join("\n")
 
-    const response = await fetch("http://localhost:3001/", {
+    const response = await fetch("https://cs-odin.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
